@@ -1,0 +1,16 @@
+<zoologico>
+    <mamiferos>
+        <animal recinto="Modificado" recintoP="Si"> Tigre </animal>
+        <animal recinto="Modificado" recintoP="Si"> Leon </animal>
+        <animal recinto="Modificado" recintoP="Si"> Oso </animal>
+        <animal recinto="Modificado" recintoP="Si"> Pantera </animal>
+    </mamiferos>
+    <reptiles tipo="serpientes">
+        <animal recinto="Modificado" venenoso="no" recintoP="Si"> Boa </animal>
+        <animal recinto="Modificado" venenoso="no" recintoP="Si"> Anaconda </animal>
+    </reptiles>
+    <reptiles tipo="lagarto">
+        <animal recinto="Modificado" venenoso="no" recintoP="Si"> Heloderma </animal>
+        <animal recinto="Modificado" venenoso="no" recintoP="Si"> Lagarto </animal>
+    </reptiles>
+</zoologico>
