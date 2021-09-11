@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: black;
+            color: whitesmoke;
+            border: 10px solid red; 
+        }
+        .parrafo {
+            color: red;
+        }
+        .container{
+            max-width: 1000px;
+        }
+        .m-auto {
+            margin: auto;
+        }
+        .text-center {
+            text-align: center;
+        }
+
+        #parrafo1 {
+            border: 10px solid purple;
+        }
+    </style>
+    <script>
+        console.log("Hola mundo");
+        var a = document.getElementsByClassName("container");
+        console.log(a);
+        var b = document.getElementById("parrafo1")
+        console.log(b);
+    </script>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <ol type="I">
+        <li class="color">1</li>
+        <li class="color">2</li>
+        <li class="color">3</li>
+        <li class="color">4</li>
+        <li class="color">5</li>
+    </ol>
+    <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod maxime ratione ex quas provident, error laborum recusandae consequuntur reiciendis aperiam a distinctio ducimus maiores fuga atque suscipit ipsa, nisi explicabo.</p>
+    <p #parrafo1 style="border: 10px solid green; padding: 5px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod maxime ratione ex quas provident, error laborum recusandae consequuntur reiciendis aperiam a distinctio ducimus maiores fuga atque suscipit ipsa, nisi explicabo.</p>
+    <div class="container m-auto">
+        <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis nulla eum ex voluptate</p>
+    </div>
+    <div class="container m-auto">
+        <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis nulla eum ex voluptate</p>
+    </div>
+    <div class="container m-auto">
+        <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis nulla eum ex voluptate</p>
+    </div>
+</body>
+</html>
