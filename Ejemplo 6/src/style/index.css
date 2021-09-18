@@ -1,0 +1,21 @@
+* {
+    --colorcito: red;
+}
+.rotate360 {
+    animation: rota 4s infinite linear;
+}
+
+@keyframes rota {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@media (min-width: 500px) {
+    #title-song {
+        color: var(--colorcito);
+    }
+}
