@@ -1,0 +1,22 @@
+{% extends 'app/base.html' %}
+
+{% block contenedor %}
+<div class="row mt-5">
+    {% for todo in todos %}
+    <div class="col-12 col-md-4 mb-3">
+        <div class="card">
+            <h5 class="card-header">
+                {{ todo.title }}
+            </h5>
+            <div class="card-body">
+                {{ todo.descripction }}
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'delete_todo' todo.id %}" class="btn btn-success"> Completed!</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
