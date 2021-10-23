@@ -1,0 +1,43 @@
+{% extends 'app/base.html' %}
+
+{% block js %}
+<script>
+    function confirmacion(id){
+        Swal.fire({
+            title: "¿Estas seguro?",
+            text: "Esta accion es irreversible",
+            icon: "question",
+            showCancelButton: true,
+            cancelButtonText: "No, cancelar",
+            confirmButtonText: "Si, eliminar",
+            confirmButtonColor: "red"
+        }).then( function (result) {
+            if(result.isConfirmed){
+                window.location.href = '/delete_todo/'+id
+            }
+        })
+    }
+</script>
+{% endblock %}
+
+{% block contenedor %}
+<div class="row mt-5">
+    {% for todo in todos %}
+    <div class="col-12 col-md-4 mb-3">
+        <div class="card">
+            <h5 class="card-header">
+                {{ todo.title }}
+            </h5>
+            <div class="card-body">
+                {{ todo.description }}
+            </div>
+            <div class="card-footer">
+                <a href="#" onclick="confirmacion({{todo.id}})" class="btn btn-success"> Completed!</a>
+                <a href="{% url 'update_todo' todo.id %}" class="btn btn-warning"> Update</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

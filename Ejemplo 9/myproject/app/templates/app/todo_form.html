@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+
+{% block contenedor %}
+
+<div class="card mt-5 mx-auto w-50 text-center">
+    <h5 class="card-header">
+        Create a new ToDo
+    </h5>
+    <div class="card-body">
+        <form action="{{todo.action}}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="title">Title ToDo</label>
+                <input class="form-control" type="text" name="title" id="title" value="{{todo.title}}" />
+            </div>
+            <div class="form-group">
+                
+                <textarea class="form-control" name="description" id="description" cols="30" rows="10">{{todo.description}}</textarea>
+            </div>
+            {% if update %}
+            <button type="submit" class="btn btn-success">Update</button>
+            {% else %}
+            <button type="submit" class="btn btn-success">Add!</button>
+            {% endif %}
+        </form>
+    </div>
+</div>
+
+{% endblock %}
